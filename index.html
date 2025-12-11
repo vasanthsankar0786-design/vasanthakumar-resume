@@ -125,6 +125,24 @@
   .profile-image:hover {
     transform: scale(1.05);
   }
+
+    .download-btn {
+      display: inline-block;
+      margin: 12px auto 0 auto;
+      padding: 10px 16px;
+      background: #20c997;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(32,201,151,0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(32,201,151,0.2);
+    }
   
   .profile-section h1 {
     font-size: 2em;
@@ -476,7 +494,10 @@
         <img src="IMG_9157.jpg" alt="Vasanthakumar Sankar" class="profile-image" loading="lazy" width="150" height="150">
       <h1>Vasanthakumar<br>Sankar</h1>
       <p class="job-title">Software Development Engineer in Test</p>
+    
+      <a href="resume.pdf" class="download-btn" download>Download Resume (PDF)</a>
     </div>
+
     
     <div class="sidebar-section">
       <h2>Contact</h2>
