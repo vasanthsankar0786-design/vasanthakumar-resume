@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#20c997"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f1724" />
+  <rect x="40" y="40" width="1120" height="550" rx="16" ry="16" fill="url(#g)" opacity="0.12" />
+  <g fill="#ffffff" font-family="Poppins, Arial, sans-serif">
+    <text x="80" y="210" font-size="48" font-weight="700">Vasanthakumar Sankar</text>
+    <text x="80" y="270" font-size="28" font-weight="600">Software Development Engineer in Test</text>
+    <text x="80" y="340" font-size="20" fill="#e6eef0" font-weight="400">Automation • Test Frameworks • CI/CD • Quality Engineering</text>
+  </g>
+  <g transform="translate(0,0)">
+    <rect x="920" y="480" width="220" height="80" rx="10" ry="10" fill="#ffffff" opacity="0.06" />
+  </g>
+</svg>
