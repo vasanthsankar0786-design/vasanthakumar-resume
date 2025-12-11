@@ -263,6 +263,32 @@
     font-size: 0.95em;
     line-height: 1.6;
   }
+
+  .cert-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .cert-badge {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 4px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .cert-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+  }
   
   .cert-item::before {
     content: '✓';
@@ -553,8 +579,14 @@
     
     <div class="sidebar-section">
       <h2>Certifications</h2>
-      <div class="cert-item">SAFe Practitioner (SP)</div>
-      <div class="cert-item">ISTQB Certified Tester Foundation Level (CTFL)</div>
+      <div class="cert-item">
+        <strong style="color: #20c997;">SAFe Practitioner (SP)</strong>
+        <span style="display: block; font-size: 0.8em; color: #b0b0b0; margin-top: 4px;">Scaled Agile Inc.</span>
+      </div>
+      <div class="cert-item">
+        <strong style="color: #20c997;">ISTQB Certified Tester Foundation Level (CTFL)</strong>
+        <span style="display: block; font-size: 0.8em; color: #b0b0b0; margin-top: 4px;">International Software Testing Qualifications Board</span>
+      </div>
     </div>
     
     <div class="sidebar-section">
