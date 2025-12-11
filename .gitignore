@@ -1,0 +1,31 @@
+.DS_Store
+.DS_Store?
+# macOS
+*.swp
+# Logs
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor directories
+.vscode/
+.idea/
+
+# Env files
+.env
+
+# Ignore built archives
+*.zip
+*.tar.gz
+*.tgz
+
+# Ignore system files
+Thumbs.db
