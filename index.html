@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vasanthakumar Sankar - Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body { 
+    font-family: 'Poppins', 'Arial', sans-serif; 
+    background: #f5f5f0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(220, 220, 210, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(220, 220, 210, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(230, 230, 220, 0.3) 0%, transparent 50%),
+      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(32, 201, 151, 0.03) 10px, rgba(32, 201, 151, 0.03) 20px);
+    margin: 0; 
+    padding: 60px 20px;
+    line-height: 1.8;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(32, 201, 151, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(26, 26, 46, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .container {
+    max-width: 1142px;
+    margin: 0 auto 60px auto;
+    background: #ffffff;
+    box-shadow: 
+      0 0 0 1px rgba(0,0,0,0.05),
+      0 2px 4px rgba(0,0,0,0.1),
+      0 8px 16px rgba(0,0,0,0.1),
+      0 16px 32px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: auto;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+  }
+  
+  /* Left Sidebar */
+  .sidebar {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    padding: 40px 30px;
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgba(32, 201, 151, 0.3);
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #20c997;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: #1a1a2e;
+    padding: 5px;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+  }
+  
+  .profile-section .job-title {
+    font-size: 1.2em;
+    color: #20c997;
+    font-weight: 700;
+    margin-top: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .sidebar-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #20c997;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 800;
+    border-bottom: 3px solid #20c997;
+    padding-bottom: 8px;
+    position: relative;
+  }
+  
+  .sidebar-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #ffffff;
+  }
+  
+  .contact-item {
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+  
+  .contact-item strong {
+    color: #20c997;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  
+  .contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .contact-item a:hover {
+    color: #20c997;
+  }
+  
+  .skills-list {
+    list-style: none;
+  }
+  
+  .skills-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  
+  .skills-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #20c997;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .cert-item {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95em;
+  }
+  
+  .cert-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #20c997;
+    font-weight: bold;
+  }
+  
+  /* Right Main Content */
+  .main-content {
+    padding: 40px 45px;
+    background: #ffffff;
+  }
+  
+  .main-section {
+    margin-bottom: 35px;
+  }
+  
+  .summary-section {
+    background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 6px solid #20c997;
+    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.1);
+    margin-bottom: 35px;
+  }
+  
+  .summary-section h2 {
+    font-size: 1.9em;
+    color: #1a1a2e;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    border-left: none;
+    padding-left: 0;
+    padding-bottom: 12px;
+    position: relative;
+    text-align: center;
+    border-bottom: 3px solid #20c997;
+  }
+  
+  .summary-section h2::after {
+    display: none;
+  }
+  
+  .summary-section p {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #2c3e50;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 0;
+    font-size: 1.05em;
+    font-weight: 400;
+    text-indent: 30px;
+  }
+  
+  .main-section h2 {
+    font-size: 1.9em;
+    color: #1a1a2e;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    border-left: 6px solid #20c997;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    position: relative;
+  }
+  
+  .main-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #20c997 0%, transparent 50%);
+  }
+  
+  .main-section p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 12px;
+    font-size: 0.98em;
+  }
+  
+  .experience-item, .project-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .experience-item:last-child, .project-item:last-child {
+    border-bottom: none;
+  }
+  
+  .experience-item h3, .project-item h3 {
+    font-size: 1.35em;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .experience-item h3::before, .project-item h3::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #20c997;
+    font-size: 1.1em;
+  }
+  
+  .experience-item .meta, .project-item .meta {
+    color: #20c997;
+    font-size: 0.95em;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-style: italic;
+  }
+  
+  .experience-item ul, .project-item ul {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  
+  .experience-item li, .project-item li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.7;
+    font-size: 0.96em;
+  }
+  
+  .education-item {
+    margin-bottom: 18px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #20c997;
+  }
+  
+  .education-item h3 {
+    font-size: 1.25em;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .education-item .meta {
+    color: #20c997;
+    font-size: 0.95em;
+    font-weight: 600;
+  }
+  
+  .award-item {
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+    color: #555;
+    background: #fff9e6;
+    border-radius: 6px;
+    font-size: 0.96em;
+    line-height: 1.6;
+  }
+  
+  .award-item::before {
+    content: '🏆';
+    position: absolute;
+    left: 10px;
+  }
+  
+  .language-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .language-item {
+    background: #ecf0f1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #1a1a2e;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  
+  @media print {
+    body { 
+      background: white;
+      padding: 0;
+    }
+    .container { 
+      box-shadow: none; 
+      margin: 0;
+      grid-template-columns: 300px 1fr;
+      max-width: 100%;
+    }
+    .sidebar { padding: 30px 25px; }
+    .main-content { padding: 30px 40px; }
+  }
+  
+  @media (max-width: 968px) {
+    body {
+      padding: 30px 15px;
+    }
+    .container {
+      grid-template-columns: 1fr;
+      margin: 0 auto 30px auto;
+      max-width: 100%;
+    }
+    .sidebar { padding: 40px 30px; }
+    .main-content { padding: 40px 30px; }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 20px 10px;
+    }
+    .container {
+      box-shadow: 
+        0 0 0 1px rgba(0,0,0,0.05),
+        0 2px 4px rgba(0,0,0,0.08),
+        0 4px 8px rgba(0,0,0,0.08);
+    }
+    .sidebar { padding: 30px 20px; }
+    .main-content { padding: 30px 20px; }
+    .profile-section h1 { font-size: 1.6em; }
+    .main-section h2 { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <div class="profile-section">
+      <img src="IMG_9157.jpg" alt="Vasanthakumar Sankar" class="profile-image">
+      <h1>Vasanthakumar<br>Sankar</h1>
+      <p class="job-title">Software Development Engineer in Test</p>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2>Contact</h2>
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:vasanthsankar0786@gmail.com">vasanthsankar0786@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone</strong>
+        +973 33957346
+      </div>
+      <div class="contact-item">
+        <strong>Location</strong>
+        Manama, Bahrain
+      </div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/vasanthakumar-sankar-623875137" target="_blank">View Profile</a>
+      </div>
+      <div class="contact-item">
+        <strong>Status</strong>
+        Family Visa (transferable)
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Selenium WebDriver</li>
+        <li>TestNG</li>
+        <li>Cucumber BDD</li>
+        <li>Postman</li>
+        <li>Browser Stack</li>
+        <li>Java</li>
+        <li>SQL (Toad by Oracle)</li>
+        <li>Jenkins</li>
+        <li>Git & GitHub</li>
+        <li>IntelliJ IDEA & Eclipse</li>
+        <li>JIRA & Rally</li>
+        <li>Agile/Scrum</li>
+        <li>API Testing</li>
+      </ul>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2>Certifications</h2>
+      <div class="cert-item">SAFe Practitioner (SP)</div>
+      <div class="cert-item">ISTQB Certified Tester Foundation Level (CTFL)</div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2>Languages</h2>
+      <div class="contact-item">Tamil</div>
+      <div class="contact-item">English</div>
+      <div class="contact-item">Telugu</div>
+    </div>
+  </aside>
+  
+  <!-- Right Main Content -->
+  <main class="main-content">
+    <section class="main-section summary-section">
+      <h2>Professional Summary</h2>
+      <p>Test Automation Engineer with expertise in Selenium and API testing, delivering enhanced regression test suites that increase release confidence and reliability. Demonstrated problem-solving abilities and a collaborative mindset that promote effective cross-functional teamwork, ensuring timely project completion and high-quality outcomes in Agile settings. Proven track record of meeting organizational needs through consistent and organized practices, thriving under pressure and adapting to new challenges. Well-practiced test automation engineer with several years designing and implementing streamlined diagnostic tools and policies. Keen to enhance legacy protocols and design holistic test automation frameworks. Veteran of revamping and developing test systems using emerging automation technology to shorten test phases, improve diagnostic accuracy and produce superior final products.</p>
+    </section>
+    
+    <section class="main-section">
+      <h2>Professional Experience</h2>
+      
+      <div class="experience-item">
+        <h3>SDET-3</h3>
+        <p class="meta">Comcast | Chennai | January 2024 – Present</p>
+        <ul>
+          <li>Maintained and enhanced end-to-end regression suites for web and API platforms using Selenium, Java, and Postman, boosting test coverage and release confidence</li>
+          <li>Actively contributed to Agile teams, improved CI/CD integration, and ensured smooth deployments through structured testing, defect triage, and cross-functional collaboration</li>
+          <li>Developed and maintained frontend automation scripts using Selenium WebDriver with Java to support continuous delivery</li>
+          <li>Performed API testing using Postman to validate backend services and ensure seamless integration with frontend components</li>
+          <li>Led Agile ceremonies, including daily stand-ups, retrospectives, sprint planning, and feature refinements</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <h3>Test Automation Engineer - Associate</h3>
+        <p class="meta">Cognizant Technology Solutions | Chennai | June 2018 – December 2023</p>
+        <ul>
+          <li>Executed detailed manual test cases across end-to-end workflows, ensuring high-quality, bug-free releases in fast-paced Agile environments</li>
+          <li>Designed, developed, and maintained automated regression scripts using Selenium and Java</li>
+          <li>Used Selenium WebDriver for cross-browser automation of critical user journeys, reducing manual effort significantly</li>
+          <li>Collaborated with developers, BAs, and product owners in Agile sprints, participating in daily standups, sprint planning, and retrospectives</li>
+          <li>Performed manual functional, regression, smoke, and UAT testing, ensuring test coverage against business requirements</li>
+          <li>Conducted API testing with Postman, validating response formats, status codes, and integrating backend testing with UI flows</li>
+          <li>Wrote and executed complex SQL queries for data validation and backend testing across multiple environments</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="main-section">
+      <h2>Key Projects</h2>
+      
+      <div class="project-item">
+        <h3>Telecommunications - Sky, Comcast</h3>
+        <p class="meta">January 2024 – Present</p>
+        <ul>
+          <li>Maintenance and enhancement of end-to-end regression test suites for Sky's web and API platforms, improving test coverage and release confidence</li>
+          <li>Automated regression test workflows by enhancing Selenium-based suites and integrating API validation processes</li>
+          <li>Actively participated in 3 Amigo calls (Dev, QA, BA) to ensure clear communication and requirement alignment</li>
+          <li>Delivered daily test progress updates and actively engaged in Agile ceremonies</li>
+        </ul>
+      </div>
+      
+      <div class="project-item">
+        <h3>Insurance - Hartford, Cognizant</h3>
+        <p class="meta">June 2019 – December 2024</p>
+        <ul>
+          <li>Played a key role in delivering high-quality releases by performing end-to-end testing of web-based applications</li>
+          <li>Designed, developed, and maintained automated regression scripts using Selenium and Java</li>
+          <li>Logged, tracked, and retested defects using JIRA, ensuring timely resolution and minimal production defects</li>
+          <li>Contributed to test planning, execution, and reporting, including test case creation, traceability matrices, and test summary reports</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="main-section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>MBA (Human Resources and Marketing)</h3>
+        <p class="meta">SRM College | Chennai, India | 2024</p>
+      </div>
+      <div class="education-item">
+        <h3>B.Com (Computer Science with Commerce)</h3>
+        <p class="meta">Satyabhama University | Chennai, India | 2017</p>
+      </div>
+    </section>
+    
+    <section class="main-section">
+      <h2>Awards & Honors</h2>
+      <div class="award-item">Pillar of the Month - Cognizant (November 2018)</div>
+      <div class="award-item">Best Emerging Player - Cognizant</div>
+      <div class="award-item">Extra Miler Award</div>
+      <div class="award-item">Grade 1 rating achieved twice</div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
+  
+ 
